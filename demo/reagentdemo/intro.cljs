@@ -139,13 +139,15 @@
 
      [:p "You can build new components using other components as
      building blocks. Like this:"]
-     [demo-component {:comp simple-parent
+     [demo-component {:expected simple-parent
+                      :comp solutions/simple-parent
                       :src  (s/src-of [:simple-parent])}]
 
      [:p "Data is passed to child components using plain old Clojure
      data types. Like this:"]
 
-     [demo-component {:comp say-hello
+     [demo-component {:expected say-hello
+                      :comp solutions/say-hello
                       :src  (s/src-of [:hello-component :say-hello])}]
 
      [:p [:strong "Note: "]
@@ -160,7 +162,8 @@
      [:p "Here is another example that shows items in a "
       [:code "seq"] ":" ]
 
-     [demo-component {:comp lister-user
+     [demo-component {:expected lister-user
+                      :comp solutions/lister-user
                       :src  (s/src-of [:lister :lister-user])}]
 
      [:p [:strong "Note: "]
@@ -184,7 +187,8 @@
    re-rendered when its value changes."]
 
    [:p "Let’s demonstrate that with a simple example:"]
-   [demo-component {:comp counting-component
+   [demo-component {:expected counting-component
+                    :comp solutions/counting-component
                     :src [:pre
                           ns-src
                           (s/src-of [:click-count :counting-component])]}]
@@ -196,7 +200,8 @@
     [:code "setTimeout"] " every time the component is rendered to
    update a counter:"]
 
-   [demo-component {:comp timer-component
+   [demo-component {:expected timer-component
+                    :comp solutions/timer-component
                     :src (s/src-of [:timer-component])}]
 
    [:p "The previous example also uses another feature of Reagent: a
@@ -210,7 +215,8 @@
    [:p "By simply passing an "[:code "atom"]" around you can share
    state management between components, like this:"]
 
-   [demo-component {:comp shared-state
+   [demo-component {:expected shared-state
+                    :comp solutions/shared-state
                     :src [:pre
                           ns-src
                           (s/src-of [:atom-input :shared-state])]}]
@@ -292,7 +298,8 @@
    [:p "Data is kept in a single " [:code "reagent.core/atom"] ": a map
    with height, weight and BMI as keys."]
 
-   [demo-component {:comp bmi-component
+   [demo-component {:expected bmi-component
+                    :comp solutions/bmi-component
                     :src [:pre
                           ns-src
                           (s/src-of [:bmi-data :calc-bmi :slider
@@ -306,7 +313,7 @@
    Leiningen project files and everything. Here’s one of them in
    action:"]
 
-   [demo-component {:comp simple/simple-example
+   [demo-component {:expected simple/simple-example
                     :complete true
                     :src (s/src-of nil "simpleexample/core.cljs")}]])
 
@@ -318,7 +325,7 @@
    Reagent (cheating a little bit by skipping routing and
    persistence):"]
 
-   [demo-component {:comp todo/todo-app
+   [demo-component {:expected todo/todo-app
                     :complete true
                     :src (s/src-of nil "todomvc/core.cljs")}]])
 

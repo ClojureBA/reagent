@@ -136,12 +136,12 @@
      [demo-component {:expected simple-component
                       :comp     solutions/simple-component
                       :hint     [:div
-                                 [:p "Los componentes en reagent usan sintaxis tipo "
+                                 [:p "Components in reagent use "
                                   [:a {:href "https://github.com/weavejester/hiccup"}
-                                   "hiccup"]
-                                  ". Un ejemplo de hiccup: "]
-                                 [:code (s/syntaxed "[:p \"Soy del \" [:span {:style {:color :red}} \"Rojo\"]]")]
-                                 [:p "Ahora intenta escribir la solución en solutions/simple-component (en el archivo src/reagentdemo/solutions.cljs), de forma tal que se vea como más arriba."]]
+                                   "hiccup syntax"]
+                                  ". Here's an example: "]
+                                 [:code (s/syntaxed "[:p \"I like it \" [:span {:style {:color :green}} \"green\"]]")]
+                                 [:p "Now try to write your solution on solutions/simple-component (in the file src/reagentdemo/solutions.cljs), in such a way that it looks like the example above."]]
                       :src      (s/src-of [:simple-component])}]
 
      [:p "You can build new components using other components as

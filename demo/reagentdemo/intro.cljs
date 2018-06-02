@@ -132,9 +132,16 @@
      and to be fast enough by default that you rarely have to care
      about performance."]
 
-     [:p "A very basic Reagent component may look something like this: "]
+     [:p "Vamos a empezar con un ejemplo de componente Reagent básico:"]
      [demo-component {:expected simple-component
                       :comp     solutions/simple-component
+                      :hint     [:div
+                                 [:p "Components in reagent use "
+                                  [:a {:href "https://github.com/weavejester/hiccup"}
+                                   "hiccup syntax"]
+                                  ". Here's an example: "]
+                                 [:code (s/syntaxed "[:p \"I like it \" [:span {:style {:color :green}} \"green\"]]")]
+                                 [:p "Now try to write your solution on solutions/simple-component (in the file src/reagentdemo/solutions.cljs), in such a way that it looks like the example above."]]
                       :src      (s/src-of [:simple-component])}]
 
      [:p "You can build new components using other components as

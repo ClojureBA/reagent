@@ -4,7 +4,7 @@
    [reagent.core :as r]))
 
 (defn simple-component []
-  [:div "Hello!"])
+  [:div "Fix me in reagentdemo.solutions/simple-component"])
 
 (defn simple-parent []
   [:div "Fix me in reagentdemo.solutions/simple-parent"])
